@@ -12,7 +12,7 @@ from .config import Settings
 
 def _collect_and_log(settings: Settings) -> None:
     path = collect_once(settings)
-    logging.info("Saved snapshot to %s", path)
+    logging.info("Appended registration statistics to %s", path)
 
 
 def main() -> None:
