@@ -1,0 +1,42 @@
+# Virtual environments
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Collected data and runtime files (may contain personal information)
+data/raw/**
+data/processed/**
+data/exports/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/exports/.gitkeep
+logs/**
+!logs/.gitkeep
+*.db
+*.sqlite3
+
+# Jupyter and editors
+.ipynb_checkpoints/
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
