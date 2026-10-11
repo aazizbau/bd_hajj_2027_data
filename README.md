@@ -53,6 +53,26 @@ For a server, prefer invoking `scrape-once` through cron or a systemd timer so
 the schedule survives restarts. The built-in scheduler is convenient for local
 development.
 
+## Registration race animation
+
+Render an animated dashboard from the processed registration history:
+
+```bash
+python hajj_racing_lines.py
+```
+
+The script reads `data/processed/hajj_2027_registration.csv` and writes
+`data/exports/hajj_registration_race.gif` by default. To make a smaller preview:
+
+```bash
+python hajj_racing_lines.py \
+  --out data/exports/hajj_registration_preview.gif \
+  --step 18 --fps 10
+```
+
+Use `--csv` to select another compatible CSV, or `--max-frames` for a quick
+rendering check. MP4 output is also supported when FFmpeg is installed.
+
 ## Layout
 
 ```text
